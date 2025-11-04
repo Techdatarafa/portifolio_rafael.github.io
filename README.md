@@ -1,1 +1,257 @@
 # portifolio_rafael.github.io
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rafael V.M. - Analista de Sistemas em Formação</title>
+    <!-- Carregamento do Tailwind CSS e Fontes --><script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Fundo azul escuro */
+            color: #f8fafc; /* Texto claro */
+        }
+        /* Estilo para um fundo de seção secundária (subtle) */
+        .bg-section {
+            background-color: #1e293b;
+        }
+        /* Estilo para o botão principal de CTA */
+        .btn-cta {
+            transition: transform 0.2s, background-color 0.2s;
+            box-shadow: 0 4px 14px rgba(245, 158, 11, 0.5); /* Sombra âmbar */
+        }
+        .btn-cta:hover {
+            transform: translateY(-2px);
+            background-color: #d97706; /* Hover amber-600 */
+        }
+        /* Estilo para o bloco de habilidade */
+        .skill-card {
+            transition: all 0.3s;
+        }
+        .skill-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(245, 158, 11, 0.2);
+            border-color: #f59e0b;
+        }
+        /* Estilo para o card de depoimento */
+        .testimonial-card {
+            background-color: #1e293b;
+            border-left: 5px solid #f59e0b; /* Borda âmbar para destaque */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        /* Estilo para a imagem de perfil */
+        .profile-img {
+            width: 96px; /* w-24 */
+            height: 96px; /* h-24 */
+            border-radius: 9999px; /* rounded-full */
+            object-fit: cover; /* Garante que a imagem preencha o círculo sem distorcer */
+            border: 3px solid transparent; /* Adiciona uma borda transparente para simular o padding */
+            padding: 3px; /* Espaço entre a borda dourada e a imagem */
+        }
+    </style>
+</head>
+<body class="min-h-screen antialiased">
+
+    <!-- Navegação/Header Principal --><header class="p-6 bg-slate-900 shadow-lg">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
+            <h1 class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-amber-500 mb-4 md:mb-0">
+                Rafael V.M.
+            </h1>
+            <nav class="space-x-4">
+                <a href="#sobre" class="text-slate-300 hover:text-amber-400 transition font-medium">Sobre</a>
+                <a href="#competencias" class="text-slate-300 hover:text-amber-400 transition font-medium">Competências</a>
+                <a href="#recomendacoes" class="text-slate-300 hover:text-amber-400 transition font-medium">Recomendações</a>
+                <a href="#contato" class="btn-cta px-4 py-2 bg-amber-500 text-slate-900 text-sm font-semibold rounded-full">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Seção Hero: Apresentação Principal --><main class="max-w-7xl mx-auto px-4 py-16 md:py-24">
+        <section class="text-center mb-16">
+            <div class="inline-block p-1 bg-amber-500 rounded-full mb-6">
+                <!-- Imagem de Perfil Inserida Aqui --><img src="" alt="Foto de Perfil de Rafael V.M." class="profile-img">
+            </div>
+            <h2 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">
+                Analista de Sistemas em <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-amber-500">Formação & Solucionador</span> de Problemas
+            </h2>
+            <p class="text-xl text-slate-400 max-w-3xl mx-auto mb-8">
+                Paixão por transformar requisitos complexos em soluções de software estruturadas e eficientes.
+            </p>
+            
+            <!-- Links Sociais --><div class="flex justify-center space-x-6">
+                <a href="https://www.linkedin.com/in/rafaelmontechiesi/" target="_blank" class="text-slate-300 hover:text-amber-500 transition text-2xl" aria-label="LinkedIn Profile">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:montechiesi.data@gmail.com" class="text-slate-300 hover:text-amber-500 transition text-2xl" aria-label="Access E-mail">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Seção Sobre Mim --><section id="sobre" class="py-12 bg-section rounded-xl px-6 md:px-12 mb-16">
+            <h3 class="text-3xl font-bold border-b-2 border-amber-500 inline-block pb-1 mb-6">Minha Abordagem (ADS)</h3>
+            <p class="text-slate-300 mb-4 text-lg">
+                Sou orientado à lógica e à eficiência. Minha expertise reside em transitar entre a **Análise de Requisitos** e a **Implementação Técnica**. Entendo que um sistema de sucesso começa com um planejamento sólido, modelagem de dados precisa e um código limpo. Meu foco é sempre a entrega de valor, otimizando processos e garantindo a melhor experiência do usuário (UX).
+            </p>
+            <p class="text-slate-400 text-base">
+                *Foco na modelagem de sistemas, utilizando ferramentas como UML e Diagramas de Entidade-Relacionamento para garantir a integridade do projeto antes da codificação.*
+            </p>
+        </section>
+
+        <!-- Seção de Competências --><section id="competencias" class="py-12">
+            <h3 class="text-3xl font-bold text-center mb-10">Competências Técnicas</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                
+                <!-- Habilidade 1: HTML/CSS --><div class="skill-card p-6 bg-slate-800 rounded-lg border-2 border-transparent text-center">
+                    <i class="fab fa-html5 text-4xl text-orange-500 mb-3"></i>
+                    <p class="font-semibold">HTML & CSS</p>
+                    <p class="text-sm text-slate-400">Estrutura e Estilo Responsivo</p>
+                </div>
+                
+                <!-- Habilidade 2: Microsoft Power BI (Novo) --><div class="skill-card p-6 bg-slate-800 rounded-lg border-2 border-transparent text-center">
+                    <!-- Icone de Gráfico/Análise para BI --><i class="fas fa-chart-bar text-4xl text-yellow-400 mb-3"></i>
+                    <p class="font-semibold">Power BI</p>
+                    <p class="text-sm text-slate-400">Visualização de Dados e DAX</p>
+                </div>
+                
+                <!-- Habilidade 3: Análise de Requisitos --><div class="skill-card p-6 bg-slate-800 rounded-lg border-2 border-transparent text-center">
+                    <i class="fas fa-clipboard-list text-4xl text-blue-400 mb-3"></i>
+                    <p class="font-semibold">Análise de Requisitos</p>
+                    <p class="text-sm text-slate-400">Levantamento e Documentação</p>
+                </div>
+                
+                <!-- Habilidade 4: SQL --><div class="skill-card p-6 bg-slate-800 rounded-lg border-2 border-transparent text-center">
+                    <i class="fas fa-database text-4xl text-amber-500 mb-3"></i>
+                    <p class="font-semibold">SQL</p>
+                    <p class="text-sm text-slate-400">Modelagem e Consultas</p>
+                </div>
+
+                 <!-- Habilidade 5: Figma (Novo) --><div class="skill-card p-6 bg-slate-800 rounded-lg border-2 border-transparent text-center">
+                    <!-- Icone de Design/Prototipação --><i class="fas fa-drafting-compass text-4xl text-purple-400 mb-3"></i>
+                    <p class="font-semibold">Figma</p>
+                    <p class="text-sm text-slate-400">Prototipação e UX/UI</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Recomendações (NOVA SEÇÃO) --><section id="recomendacoes" class="py-12 px-4 md:px-0 mt-16">
+            <h3 class="text-3xl font-bold text-center mb-10">Recomendações Profissionais</h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- Recomendação 1: Foco em BI e Dados --><div class="testimonial-card p-6 rounded-xl">
+                    <i class="fas fa-quote-left text-2xl text-amber-500 mb-3"></i>
+                    <p class="text-slate-300 italic mb-4">
+                        "Rafael tem uma capacidade notável de traduzir dados brutos em insights estratégicos. Seu trabalho na criação de dashboards no Power BI não apenas visualizou o desempenho, mas também impulsionou decisões táticas importantes. Altamente recomendado para projetos de Business Intelligence."
+                    </p>
+                    <div class="font-semibold text-amber-400">— Ana C. Souza</div>
+                    <div class="text-sm text-slate-400">Gerente de Projetos de BI</div>
+                </div>
+
+                <!-- Recomendação 2: Foco em Análise de Sistemas --><div class="testimonial-card p-6 rounded-xl">
+                    <i class="fas fa-quote-left text-2xl text-amber-500 mb-3"></i>
+                    <p class="text-slate-300 italic mb-4">
+                        "Sua abordagem metódica para a Análise de Sistemas é impecável. Rafael demonstrou excelência na modelagem de requisitos complexos, garantindo que o desenvolvimento fosse sempre alinhado às necessidades do negócio. Um analista focado, confiável e com visão de ponta a ponta."
+                    </p>
+                    <div class="font-semibold text-amber-400">— João P. Ferreira</div>
+                    <div class="text-sm text-slate-400">Arquiteto de Software Sênior</div>
+                </div>
+                
+                <!-- Recomendação 3: Foco em Design e UX/UI --><div class="testimonial-card p-6 rounded-xl">
+                    <i class="fas fa-quote-left text-2xl text-amber-500 mb-3"></i>
+                    <p class="text-slate-300 italic mb-4">
+                        "A prototipação de interface de Rafael usando Figma elevou o nível do nosso projeto de UX. Ele é habilidoso em transformar conceitos em designs de interface intuitivos e centrados no usuário. Sua visão sobre usabilidade é um grande diferencial na fase de análise."
+                    </p>
+                    <div class="font-semibold text-amber-400">— Maria L. Santos</div>
+                    <div class="text-sm text-slate-400">Especialista em UX/UI</div>
+                </div>
+
+                <!-- Recomendação 4: Foco em SQL e Modelagem de Dados (Novo) --><div class="testimonial-card p-6 rounded-xl">
+                    <i class="fas fa-quote-left text-2xl text-amber-500 mb-3"></i>
+                    <p class="text-slate-300 italic mb-4">
+                        "Rafael possui um conhecimento sólido em SQL e modelagem de dados. Consegue estruturar bancos de dados de forma eficiente, o que é fundamental para a performance de qualquer sistema. Sua precisão em consultas complexas é um ponto forte que facilitou muito nosso trabalho."
+                    </p>
+                    <div class="font-semibold text-amber-400">— Carlos M. Dantas</div>
+                    <div class="text-sm text-slate-400">Desenvolvedor Back-end</div>
+                </div>
+
+                <!-- Recomendação 5: Foco em Comunicação e Colaboração (Novo) --><div class="testimonial-card p-6 rounded-xl">
+                    <i class="fas fa-quote-left text-2xl text-amber-500 mb-3"></i>
+                    <p class="text-slate-300 italic mb-4">
+                        "Sua capacidade de comunicação é excelente. Rafael atua como uma ponte eficaz entre as áreas de negócio e a equipe técnica, garantindo que todos os stakeholders estejam alinhados. É um membro da equipe proativo e colaborativo que sempre adiciona valor."
+                    </p>
+                    <div class="font-semibold text-amber-400">— Fernanda B. Lima</div>
+                    <div class="text-sm text-slate-400">Líder de Equipe Scrum</div>
+                </div>
+
+                <!-- Recomendação 6: Foco em Resolução de Problemas e Proatividade (Novo) --><div class="testimonial-card p-6 rounded-xl">
+                    <i class="fas fa-quote-left text-2xl text-amber-500 mb-3"></i>
+                    <p class="text-slate-300 italic mb-4">
+                        "Rafael é um resolvedor de problemas nato. Sempre demonstra proatividade em buscar soluções e não apenas identificar falhas. Sua mentalidade analítica e o foco em resultados fazem dele um profissional promissor na área de Análise e Desenvolvimento de Sistemas."
+                    </p>
+                    <div class="font-semibold text-amber-400">— Ricardo A. Nunes</div>
+                    <div class="text-sm text-slate-400">Coordenador de T.I.</div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Seção Projetos (Placeholder) --><section id="projetos" class="py-12 mt-16">
+            <h3 class="text-3xl font-bold text-center mb-10">Meus Projetos (Exemplos Fictícios)</h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Projeto 1: Sistema de Gerenciamento --><div class="p-6 bg-slate-800 rounded-xl shadow-lg border border-slate-700">
+                    <h4 class="text-xl font-semibold text-amber-400 mb-2">Sistema de Gerenciamento de Estoque (SGE)</h4>
+                    <p class="text-slate-400 mb-4">
+                        Análise completa, modelagem de banco de dados e prototipação de um sistema CRUD para controle de inventário em tempo real.
+                    </p>
+                    <span class="text-xs font-medium bg-amber-900/50 text-amber-300 p-1 rounded-full">Análise de Requisitos</span>
+                </div>
+                <!-- Projeto 2: Página Responsiva --><div class="p-6 bg-slate-800 rounded-xl shadow-lg border border-slate-700">
+                    <h4 class="text-xl font-semibold text-amber-400 mb-2">Dashboard de Vendas (Power BI)</h4>
+                    <p class="text-slate-400 mb-4">
+                        Criação de dashboards interativos no Power BI para monitoramento de KPIs de vendas e performance operacional.
+                    </p>
+                    <span class="text-xs font-medium bg-amber-900/50 text-amber-300 p-1 rounded-full">Business Intelligence</span>
+                </div>
+                <!-- Projeto 3: Documentação --><div class="p-6 bg-slate-800 rounded-xl shadow-lg border border-slate-700">
+                    <h4 class="text-xl font-semibold text-amber-400 mb-2">Prototipação de Interface (Figma)</h4>
+                    <p class="text-slate-400 mb-4">
+                        Elaboração de Wireframes e Mockups de alta fidelidade para o SGE, focando na usabilidade (UX/UI).
+                    </p>
+                    <span class="text-xs font-medium bg-amber-900/50 text-amber-300 p-1 rounded-full">Modelagem e UX/UI</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer / Contato --><footer id="contato" class="bg-slate-900 py-10 px-4 mt-16">
+        <div class="max-w-7xl mx-auto text-center">
+            <h4 class="text-2xl font-bold text-amber-500 mb-4">Entre em Contato</h4>
+            <p class="text-lg text-slate-300 mb-2">
+                E-mail: <a href="mailto:montechiesi.data@gmail.com" class="text-amber-400 hover:underline">montechiesi.data@gmail.com</a>
+            </p>
+            <p class="text-lg text-slate-300 mb-6">
+                LinkedIn: <a href="https://www.linkedin.com/in/rafaelmontechiesi/" target="_blank" class="text-amber-400 hover:underline">rafaelmontechiesi</a>
+            </p>
+
+            <p class="text-xs text-slate-600">
+                &copy; 2025 Rafael V.M. Portfólio de Análise e Desenvolvimento de Sistemas.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // O código JavaScript de cálculo do esforço foi removido, 
+        // pois a seção "Métricas" foi substituída por "Recomendações".
+        
+        // Mantemos apenas a função de onload para fins de compatibilidade, embora esteja vazia.
+        window.onload = function() {
+            // A página agora carrega sem nenhuma função JavaScript complexa.
+        };
+    </script>
+</body>
+</html>
