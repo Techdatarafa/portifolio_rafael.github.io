@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rafael V.M. - Analista de Sistemas em Formação</title>
-    <!-- Carregamento do Tailwind CSS e Fontes -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Carregamento do Tailwind CSS e Fontes --><script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -23,7 +22,6 @@
         }
 
         /* 1. ESTILO PARA BOTÕES CTA (Usado na Seção Hero e Contato Final) */
-        /* Define a APARÊNCIA de um botão preenchido */
         .nav-link-cta {
             background-color: #ffb800; /* Amarelo Laranja */
             color: #0f1c3a; /* Texto Azul Escuro */
@@ -36,8 +34,8 @@
         }
 
         /* 2. ESTILO PARA LINKS DE NAVEGAÇÃO (Hover) */
-        /* Define a APARÊNCIA de um link de navegação que só muda no hover */
         .nav-link-hover {
+            /* CORRIGIDO: @apply garantido para bordas arredondadas e padding */
             @apply px-4 py-2 rounded-full font-semibold transition-all duration-300 ease-in-out;
             color: #f0f8fc; /* Cor do texto padrão */
             background-color: transparent; /* Fundo transparente padrão */
@@ -58,33 +56,26 @@
 </head>
 <body>
 
-    <!-- Cabeçalho / Navegação -->
-    <header class="sticky top-0 z-50 bg-opacity-95 backdrop-blur-md bg-[#0f1c3a] shadow-lg">
+    <!-- Cabeçalho / Navegação --><header class="sticky top-0 z-50 bg-opacity-95 backdrop-blur-md bg-[#0f1c3a] shadow-lg">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <!-- Logo/Nome -->
-            <a href="#home" class="text-3xl font-extrabold text-[#ffb800]">Rafael V.M.</a>
+            <!-- Logo/Nome --><a href="#home" class="text-3xl font-extrabold text-[#ffb800]">Rafael V.M.</a>
 
-            <!-- Links de Navegação -->
-            <div class="flex items-center space-x-2 sm:space-x-4">
-                <!-- Links normais de navegação -->
-                <a href="#sobre" class="nav-link-hover hidden sm:inline-block">Sobre</a>
+            <!-- Links de Navegação --><div class="flex items-center space-x-2 sm:space-x-4">
+                <!-- Links normais de navegação --><a href="#sobre" class="nav-link-hover hidden sm:inline-block">Sobre</a>
                 <a href="#competencias" class="nav-link-hover hidden sm:inline-block">Competências</a>
                 <a href="#recomendacoes" class="nav-link-hover hidden sm:inline-block">Recomendações</a>
                 
-                <!-- CORREÇÃO APLICADA AQUI: Deve ser nav-link-hover -->
-                <a href="#contato" class="nav-link-hover">Contato</a>
+                <!-- Contato com o estilo nav-link-hover --><a href="#contato" class="nav-link-hover">Contato</a>
             </div>
         </nav>
     </header>
 
-    <!-- Seção Principal (Hero) -->
-    <section id="home" class="min-h-screen flex items-center justify-center text-center p-8 pt-20">
+    <!-- Seção Principal (Hero) --><section id="home" class="min-h-screen flex items-center justify-center text-center p-8 pt-20">
         <div class="max-w-4xl mx-auto">
-            <!-- Círculo da Imagem de Perfil -->
-            <div class="mb-8 flex justify-center">
+            <!-- Círculo da Imagem de Perfil --><div class="mb-8 flex justify-center">
                 <div class="profile-circle w-48 h-48 rounded-full overflow-hidden flex items-center justify-center p-1">
-                    <img 
-                        src="Foto_perfil.png" 
+                    <!-- CORRIGIDO: O nome do arquivo da imagem agora é 'foto_perfil.png' --><img 
+                        src="foto_perfil.png" 
                         alt="Foto de Perfil de Rafael V.M." 
                         class="w-full h-full object-cover rounded-full"
                         style="width: 192px; height: 192px;"
@@ -101,24 +92,20 @@
                 Paixão por transformar requisitos complexos em soluções de software estruturadas e eficientes.
             </p>
 
-            <!-- Ícones Sociais -->
-            <div class="flex justify-center space-x-6 text-3xl mb-12">
+            <!-- Ícones Sociais --><div class="flex justify-center space-x-6 text-3xl mb-12">
                 <a href="#" target="_blank" aria-label="LinkedIn" class="hover:text-[#ffb800] transition-colors duration-300">
                     <i class="fab fa-linkedin-in"></i>
                 </a>
                 <a href="mailto:seuemail@exemplo.com" aria-label="Email" class="hover:text-[#ffb800] transition-colors duration-300">
                     <i class="fas fa-envelope"></i>
                 </a>
-                <!-- Adicione mais ícones conforme necessário (GitHub, etc.) -->
-            </div>
+                <!-- Adicione mais ícones conforme necessário (GitHub, etc.) --></div>
             
-            <!-- Botão CTA na seção Hero: USA O ESTILO COMPLETO DE CTA -->
-            <a href="#contato" class="nav-link-cta text-lg sm:text-xl py-3 px-8 inline-block">Fale Comigo</a>
+            <!-- Botão CTA na seção Hero: USA O ESTILO COMPLETO DE CTA --><a href="#contato" class="nav-link-cta text-lg sm:text-xl py-3 px-8 inline-block">Fale Comigo</a>
         </div>
     </section>
 
-    <!-- Seção Sobre (Detalhes) -->
-    <section id="sobre" class="bg-section py-20 px-4 sm:px-8">
+    <!-- Seção Sobre (Detalhes) --><section id="sobre" class="bg-section py-20 px-4 sm:px-8">
         <div class="max-w-5xl mx-auto">
             <h2 class="text-4xl font-bold text-center mb-12 border-b-4 border-[#ffb800] pb-2 inline-block mx-auto">
                 Sobre Mim e Abordagem
@@ -146,14 +133,12 @@
         </div>
     </section>
 
-    <!-- Seção Competências (Skills) -->
-    <section id="competencias" class="py-20 px-4 sm:px-8">
+    <!-- Seção Competências (Skills) --><section id="competencias" class="py-20 px-4 sm:px-8">
         <div class="max-w-5xl mx-auto">
             <h2 class="text-4xl font-bold text-center mb-12 border-b-4 border-[#ffb800] pb-2 inline-block mx-auto">
                 Minhas Competências
             </h2>
-            <!-- Conteúdo Placeholder para as Competências -->
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 text-center">
+            <!-- Conteúdo Placeholder para as Competências --><div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 text-center">
                 <div class="p-6 rounded-lg bg-section shadow-xl hover:shadow-2xl transition-all duration-300">
                     <i class="fas fa-code text-5xl text-[#ffb800] mb-4"></i>
                     <h3 class="text-xl font-semibold">Desenvolvimento (Full-Stack)</h3>
@@ -174,19 +159,16 @@
                     <h3 class="text-xl font-semibold">Cloud Computing</h3>
                     <p class="text-sm text-gray-400">Conceitos AWS/Azure/GCP</p>
                 </div>
-                <!-- Adicionar mais competências aqui -->
-            </div>
+                <!-- Adicionar mais competências aqui --></div>
         </div>
     </section>
 
-    <!-- Seção Recomendações (Testemunhos) -->
-    <section id="recomendacoes" class="bg-section py-20 px-4 sm:px-8">
+    <!-- Seção Recomendações (Testemunhos) --><section id="recomendacoes" class="bg-section py-20 px-4 sm:px-8">
         <div class="max-w-5xl mx-auto">
             <h2 class="text-4xl font-bold text-center mb-12 border-b-4 border-[#ffb800] pb-2 inline-block mx-auto">
                 Recomendações
             </h2>
-            <!-- Conteúdo Placeholder para Recomendações -->
-            <div class="grid md:grid-cols-3 gap-8">
+            <!-- Conteúdo Placeholder para Recomendações --><div class="grid md:grid-cols-3 gap-8">
                 <div class="p-6 rounded-lg bg-[#0f1c3a] shadow-xl border-t-4 border-[#ffb800]">
                     <p class="italic mb-4">"O Rafael demonstrou grande capacidade de análise e detalhamento. Seu projeto superou as expectativas em termos de robustez e organização."</p>
                     <p class="font-semibold text-[#ffb800]">- Professor X, Faculdade Y</p>
@@ -203,20 +185,17 @@
         </div>
     </section>
 
-    <!-- Seção Contato (CTA Final) -->
-    <section id="contato" class="py-20 px-4 sm:px-8 text-center">
+    <!-- Seção Contato (CTA Final) --><section id="contato" class="py-20 px-4 sm:px-8 text-center">
         <div class="max-w-3xl mx-auto">
             <h2 class="text-4xl font-bold mb-4">Pronto para Começar um Projeto?</h2>
             <p class="text-xl mb-8 text-gray-300">
                 Se você tem uma ideia, um problema a ser resolvido ou apenas quer trocar uma ideia sobre Análise de Sistemas, entre em contato!
             </p>
-            <!-- Este botão usa o estilo CTA completo -->
-            <a href="mailto:seuemail@exemplo.com" class="nav-link-cta text-xl py-4 px-10 inline-block">Enviar Email para Rafael</a>
+            <!-- Este botão usa o estilo CTA completo --><a href="mailto:seuemail@exemplo.com" class="nav-link-cta text-xl py-4 px-10 inline-block">Enviar Email para Rafael</a>
         </div>
     </section>
 
-    <!-- Rodapé -->
-    <footer class="bg-[#0f1c3a] border-t border-gray-700 py-8 px-4 sm:px-8">
+    <!-- Rodapé --><footer class="bg-[#0f1c3a] border-t border-gray-700 py-8 px-4 sm:px-8">
         <div class="max-w-7xl mx-auto text-center text-sm text-gray-400">
             <p>&copy; 2025 Rafael V.M. Todos os direitos reservados.</p>
             <p>Desenvolvido com paixão por Solucionar Problemas.</p>
