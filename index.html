@@ -22,25 +22,28 @@
             background-color: #1a294b;
         }
 
-        /* Estilo para o botão principal de CTA / Destaque de Navegação */
+        /* 1. ESTILO PARA BOTÕES CTA (Usado na Seção Hero e Contato Final) */
+        /* Define a APARÊNCIA de um botão preenchido */
         .nav-link-cta {
-            @apply px-4 py-2 rounded-full font-semibold transition-all duration-300 ease-in-out;
             background-color: #ffb800; /* Amarelo Laranja */
             color: #0f1c3a; /* Texto Azul Escuro */
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+            @apply px-4 py-2 rounded-full font-semibold transition-all duration-300 ease-in-out;
         }
         .nav-link-cta:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
         }
 
-        /* NOVO ESTILO: Efeito de botão para os links de navegação no hover (Correção) */
+        /* 2. ESTILO PARA LINKS DE NAVEGAÇÃO (Hover) */
+        /* Define a APARÊNCIA de um link de navegação que só muda no hover */
         .nav-link-hover {
             @apply px-4 py-2 rounded-full font-semibold transition-all duration-300 ease-in-out;
             color: #f0f8fc; /* Cor do texto padrão */
             background-color: transparent; /* Fundo transparente padrão */
         }
 
+        /* O HOVER transforma o link na cor CTA */
         .nav-link-hover:hover {
             background-color: #ffb800; /* Fundo Amarelo ao passar o mouse */
             color: #0f1c3a; /* Texto escuro ao passar o mouse */
@@ -63,12 +66,12 @@
 
             <!-- Links de Navegação -->
             <div class="flex items-center space-x-2 sm:space-x-4">
-                <!-- Links de navegação com hover corrigido -->
+                <!-- Links normais de navegação -->
                 <a href="#sobre" class="nav-link-hover hidden sm:inline-block">Sobre</a>
                 <a href="#competencias" class="nav-link-hover hidden sm:inline-block">Competências</a>
                 <a href="#recomendacoes" class="nav-link-hover hidden sm:inline-block">Recomendações</a>
                 
-            <!-- CORRIGIDO: Contato agora usa nav-link-hover. Antes usava nav-link-cta. -->
+                <!-- CORREÇÃO APLICADA AQUI: Deve ser nav-link-hover -->
                 <a href="#contato" class="nav-link-hover">Contato</a>
             </div>
         </nav>
@@ -80,7 +83,6 @@
             <!-- Círculo da Imagem de Perfil -->
             <div class="mb-8 flex justify-center">
                 <div class="profile-circle w-48 h-48 rounded-full overflow-hidden flex items-center justify-center p-1">
-                    <!-- A imagem usada é a que você enviou: Captura de tela 2025-10-24 153536.png -->
                     <img 
                         src="Captura de tela 2025-10-24 153536.png" 
                         alt="Foto de Perfil de Rafael V.M." 
@@ -110,8 +112,8 @@
                 <!-- Adicione mais ícones conforme necessário (GitHub, etc.) -->
             </div>
             
-            <!-- Botão CTA opcional na seção Hero -->
-            <a href="#contato" class="nav-link-hover text-lg sm:text-xl py-3 px-8 inline-block">Fale Comigo</a>
+            <!-- Botão CTA na seção Hero: USA O ESTILO COMPLETO DE CTA -->
+            <a href="#contato" class="nav-link-cta text-lg sm:text-xl py-3 px-8 inline-block">Fale Comigo</a>
         </div>
     </section>
 
@@ -208,6 +210,7 @@
             <p class="text-xl mb-8 text-gray-300">
                 Se você tem uma ideia, um problema a ser resolvido ou apenas quer trocar uma ideia sobre Análise de Sistemas, entre em contato!
             </p>
+            <!-- Este botão usa o estilo CTA completo -->
             <a href="mailto:seuemail@exemplo.com" class="nav-link-cta text-xl py-4 px-10 inline-block">Enviar Email para Rafael</a>
         </div>
     </section>
