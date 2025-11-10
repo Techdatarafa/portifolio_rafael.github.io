@@ -9,23 +9,45 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <style>
+        /* Configuração base para o Tailwind */
         body {
             font-family: 'Inter', sans-serif;
             background-color: #0f172a; /* Fundo azul escuro */
             color: #f8fafc; /* Texto claro */
+            scroll-behavior: smooth; /* Rolagem suave ao clicar em links âncora */
         }
         /* Estilo para um fundo de seção secundária (subtle) */
         .bg-section {
             background-color: #1e293b;
         }
-        /* Estilo para o botão principal de CTA */
-        .btn-cta {
-            transition: transform 0.2s, background-color 0.2s;
-            box-shadow: 0 4px 14px rgba(245, 158, 11, 0.5); /* Sombra âmbar */
+        /* Estilo para o botão principal de CTA/ Destaque de navegação */
+        .nav-link-cta {
+           @apply px-4 py-2 rounded-full font-semibold transition-all duration-300 ease-in-out;
+            background-color: #ffb800; /* Amarelo Laranja */
+            color: #0f1c3a; /* Texto Azul Escuro */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
         }
-        .btn-cta:hover {
+        .nav-link-cta:hover {
             transform: translateY(-2px);
-            background-color: #d97706; /* Hover amber-600 */
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* NOVO ESTILO: Efeito de botão para os links de navegação no hover (Correção) */
+        .nav-link-hover {
+            @apply px-4 py-2 rounded-full font-semibold transition-all duration-300 ease-in-out;
+            color: #f0f8fc; /* Cor do texto padrão */
+            background-color: transparent; /* Fundo transparente padrão */
+        }
+
+        .nav-link-hover:hover {
+            background-color: #ffb800; /* Fundo Amarelo ao passar o mouse */
+            color: #0f1c3a; /* Texto escuro ao passar o mouse */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+        }
+        .btn-cta:hover, .btn-cta:focus {
+            transform: translateY(-2px);
+            /* Cor de fundo e texto serão definidos no HTML para ser ativado no hover */
+            box-shadow: 0 4px 14px rgba(245, 158, 11, 0.5); /* Adiciona sombra ao passar o mouse */
         }
         /* Estilo para o bloco de habilidade */
         .skill-card {
@@ -62,7 +84,7 @@
                 Rafael V.M.
             </h1>
             <nav class="space-x-4">
-                <a href="#sobre" class="text-slate-300 hover:text-amber-400 transition font-medium">Sobre</a>
+                <a href="#sobre" class="text-slate-300 hover:text-amber-400 transition font-medium">Objetivo</a>
                 <a href="#competencias" class="text-slate-300 hover:text-amber-400 transition font-medium">Competências</a>
                 <a href="#recomendacoes" class="text-slate-300 hover:text-amber-400 transition font-medium">Recomendações</a>
                 <a href="#contato" class="btn-cta px-4 py-2 bg-amber-500 text-slate-900 text-sm font-semibold rounded-full">Contato</a>
