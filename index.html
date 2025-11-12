@@ -64,6 +64,18 @@
         .profile-circle {
             border: 2px solid #ffb800; /* Borda amarela */
         }
+        /* ----------------------------------------------------- */
+        /* CORREÇÃO DA ALTURA FIXA PARA CARTÕES DE PROJETO (PX)  */
+        /* ----------------------------------------------------- */
+        /* Usar `px` garante que o min-height não seja afetado pelo "text-zoom" do navegador.
+           Adicionei a classe flex para garantir que o conteúdo fique sempre no topo.
+        */
+        .project-card-fixed {
+            min-height: 220px; /* Defina o valor em pixels desejado */
+            display: flex;
+            flex-direction: column;
+        }
+        /* ----------------------------------------------------- */
     </style>
 </head>
 <body>
@@ -204,21 +216,21 @@
     <section id="projetos" class="py-12 mt-16">
             <h3 class="text-3xl font-bold text-center mb-10">Meus Projetos (Exemplos Fictícios)</h3>
             <div class="grid md:grid-cols-3 gap-8 items-stretch">
-                <!-- Projeto 1: Sistema de Gerenciamento --><div class="p-6 bg-slate-800 rounded-xl shadow-lg border border-slate-700 h-full min-h-[200px] transition-transform duration-300 hover:scale-[1.02]">
+                <!-- Projeto 1: Sistema de Gerenciamento --><div class="p-6 bg-slate-800 rounded-xl shadow-lg border border-slate-700 h-full transition-transform duration-300 hover:scale-[1.02]">
                     <h4 class="text-xl font-semibold text-amber-400 mb-2">Sistema de Gerenciamento de Estoque (SGE)</h4>
                     <p class="text-slate-400 mb-4">
                         Análise completa, modelagem de banco de dados e prototipação de um sistema CRUD para controle de inventário em tempo real.
                     </p>
                     <span class="text-xs font-medium bg-amber-900/50 text-amber-300 p-1 rounded-full">Análise de Requisitos</span>
                 </div>
-                <!-- Projeto 2: Página Responsiva --><div class="p-6 bg-slate-800 rounded-xl shadow-lg border border-slate-700 h-full min-h-[200px] transition-transform duration-300 hover:scale-[1.02]">
+                <!-- Projeto 2: Página Responsiva --><div class="p-6 bg-slate-800 rounded-xl shadow-lg border border-slate-700 h-full transition-transform duration-300 hover:scale-[1.02]">
                     <h4 class="text-xl font-semibold text-amber-400 mb-2">Dashboard de Vendas (Power BI)</h4>
                     <p class="text-slate-400 mb-4">
                         Criação de dashboards interativos no Power BI para monitoramento de KPIs de vendas e performance operacional.
                     </p>
                     <span class="text-xs font-medium bg-amber-900/50 text-amber-300 p-1 rounded-full">Business Intelligence</span>
                 </div>
-                <!-- Projeto 3: Documentação --><div class="p-6 bg-slate-800 rounded-xl shadow-lg border border-slate-700 h-full min-h-[200px] transition-transform duration-300 hover:scale-[1.02]">
+                <!-- Projeto 3: Documentação --><div class="p-6 bg-slate-800 rounded-xl shadow-lg border border-slate-700 h-full transition-transform duration-300 hover:scale-[1.02]">
                     <h4 class="text-xl font-semibold text-amber-400 mb-2">Prototipação de Interface (Figma)</h4>
                     <p class="text-slate-400 mb-4">
                         Elaboração de Wireframes e Mockups de alta fidelidade para o SGE, focando na usabilidade (UX/UI).
