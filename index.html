@@ -77,25 +77,40 @@
     </style>
 </head>
 <body>
-
     
     <!-- Cabeçalho / Navegação -->
     <header class="sticky top-0 z-50 bg-opacity-95 backdrop-blur-md bg-[#0f1c3a] shadow-lg">
-        <!-- Navegação Responsiva: px-4 no mobile, sm:px-6 no tablet/desktop -->
+        <!-- Navegação Responsiva: Container principal -->
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
             <!-- Logo/Nome -->
             <a href="#home" class="text-3xl font-extrabold text-[#ffb800]">Rafael V.M.</a>
 
-            <!-- Links de Navegação (Hidden em mobile, visíveis a partir de 'sm') -->
-            <div class="flex items-center space-x-2 sm:space-x-4">
-                <a href="#sobre" class="px-4 py-2 rounded-full font-semibold transition-all duration-300 ease-in-out nav-link-hover hidden sm:inline-block">Sobre</a>
-                <a href="#competencias" class="px-4 py-2 rounded-full font-semibold transition-all duration-300 ease-in-out nav-link-hover hidden sm:inline-block">Competências</a>
-                <a href="#recomendacoes" class="px-4 py-2 rounded-full font-semibold transition-all duration-300 ease-in-out nav-link-hover hidden sm:inline-block">Recomendações</a>
-                
+            <!-- 1. Links de Navegação (Desktop: Visíveis a partir de 'sm') -->
+            <!-- Esta div é visível apenas em telas >= sm -->
+            <div class="hidden sm:flex items-center space-x-4">
+                <a href="#sobre" class="px-4 py-2 rounded-full font-semibold transition-all duration-300 ease-in-out nav-link-hover">Sobre</a>
+                <a href="#competencias" class="px-4 py-2 rounded-full font-semibold transition-all duration-300 ease-in-out nav-link-hover">Competências</a>
+                <a href="#recomendacoes" class="px-4 py-2 rounded-full font-semibold transition-all duration-300 ease-in-out nav-link-hover">Recomendações</a>
                 <a href="#contato" class="px-4 py-2 rounded-full font-semibold transition-all duration-300 ease-in-out nav-link-hover">Contato</a>
             </div>
+
+            <!-- 2. Botão do Hamburger (Mobile: Visível APENAS em telas < sm) -->
+            <button id="menu-toggle" class="sm:hidden text-[#ffb800] p-2 rounded-md hover:bg-[#1a294b]">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
         </nav>
     </header>
+
+    <!-- 3. Menu Mobile (Dropdown: Visível apenas em mobile quando ativado - padrão 'hidden') -->
+    <div id="mobile-menu" class="hidden sm:hidden bg-[#1a294b] shadow-xl transition-all duration-300 ease-in-out">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+            <!-- Links em bloco para ocupar a largura total do dropdown -->
+            <a href="#sobre" onclick="closeMenu()" class="block px-3 py-2 rounded-md text-base font-medium nav-link-hover hover:bg-slate-700">Sobre</a>
+            <a href="#competencias" onclick="closeMenu()" class="block px-3 py-2 rounded-md text-base font-medium nav-link-hover hover:bg-slate-700">Competências</a>
+            <a href="#recomendacoes" onclick="closeMenu()" class="block px-3 py-2 rounded-md text-base font-medium nav-link-hover hover:bg-slate-700">Recomendações</a>
+            <a href="#contato" onclick="closeMenu()" class="block px-3 py-2 rounded-md text-base font-medium nav-link-hover hover:bg-slate-700">Contato</a>
+        </div>
+    </div>
 
     <!-- Seção Principal (Hero) -->
     <section id="home" class="min-h-screen flex items-center justify-center text-center p-8 pt-20">
@@ -156,7 +171,7 @@
                         <li>- 3º) Implementação da Solução com foco em eficiência e inovação.</li>
                     </ul>
                     <!-- Margem negativa para unir os parágrafos -->
-                    <p class="mt-[+1.5rem]"> 
+                    <p class="mt-[1.5rem]"> 
                         Essa abordagem garante que cada projeto que eu encaro seja construído sobre uma base sólida, minimizando riscos e maximizando a entrega de valor.
                     </p>
                 </div>
@@ -258,36 +273,67 @@
     </section>
 
     <!-- Seção Contato (CTA Final) -->
-    <section id="contato" class="py-16 px-4 sm:px-8 text-center bg-[#0f1c3a]">
-        <div class="max-w-2xl mx-auto">
-            <h2 class="text-3xl font-bold mb-4">Pronto para Começar um Projeto?</h2>
+    <section id="contato" class="py-16 px-4 sm:px-8 text-center bg-[#0f1c3a]">
+        <div class="max-w-2xl mx-auto">
+            <h2 class="text-3xl font-bold mb-4">Pronto para Começar um Projeto?</h2>
             <!-- Responsividade do parágrafo: text-lg no mobile, text-xl padrão -->
-            <p class="text-center text-lg sm:text-xl mb-12 text-gray-300">Se você tem uma ideia, um problema a ser resolvido ou apenas quer trocar uma ideia sobre dados e sistemas, entre em contato!</p>
+            <p class="text-center text-lg sm:text-xl mb-12 text-gray-300">Se você tem uma ideia, um problema a ser resolvido ou apenas quer trocar uma ideia sobre dados e sistemas, entre em contato!</p>
 
 <!-- Links de Contato: flex-col em mobile (empilha), sm:flex-row em desktop (lado a lado) -->
-            <div class="flex flex-col sm:flex-row justify-center items-center space-y-6 sm:space-y-0 sm:space-x-12 text-lg sm:text-2xl">
-                <!-- E-mail -->
-                <a href="mailto:montechiesi.data@gmail.com" class="flex items-center text-white hover:text-[#ffb800] transition-colors duration-300">
-                    <i class="fas fa-envelope text-2xl sm:text-2xl mr-3"></i>
-                    <span class="whitespace-nowrap">E-mail</span> <!-- Alterado para E-mail para ser mais conciso no mobile -->
-                </a>
-                <!-- LinkedIn -->
-                <a href="https://www.linkedin.com/in/rafaelmontechiesi/" target="_blank" class="flex items-center text-white hover:text-[#ffb800] transition-colors duration-300">
-                    <i class="fab fa-linkedin-in text-2xl sm:text-2xl mr-3"></i>
-                    <span class="whitespace-nowrap">LinkedIn</span>
-                </a>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Rodapé -->
-    <footer class="bg-[#0f1c3a] border-t border-gray-700 py-8 px-4 sm:px-8">
-        <!-- Responsividade do texto: text-sm no mobile, text-lg padrão -->
-        <div class="text-sm sm:text-lg text-slate-300 mb-6 text-center">
-            <p>&copy; 2025 Rafael V.M. Todos os direitos reservados.</p>
-            <p>Portfólio de Análise e Desenvolvimento de Sistemas.</p>
-        </div>
-    </footer>
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-6 sm:space-y-0 sm:space-x-12 text-lg sm:text-2xl">
+                <!-- E-mail -->
+                <a href="mailto:montechiesi.data@gmail.com" class="flex items-center text-white hover:text-[#ffb800] transition-colors duration-300">
+                    <i class="fas fa-envelope text-2xl sm:text-2xl mr-3"></i>
+                    <span class="whitespace-nowrap">E-mail</span> <!-- Alterado para E-mail para ser mais conciso no mobile -->
+                </a>
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/rafaelmontechiesi/" target="_blank" class="flex items-center text-white hover:text-[#ffb800] transition-colors duration-300">
+                    <i class="fab fa-linkedin-in text-2xl sm:text-2xl mr-3"></i>
+                    <span class="whitespace-nowrap">LinkedIn</span>
+                </a>
+            </div>
+        </div>
+    </section>
+        
+    <!-- Rodapé -->
+    <footer class="bg-[#0f1c3a] border-t border-gray-700 py-8 px-4 sm:px-8">
+        <!-- Responsividade do texto: text-sm no mobile, text-lg padrão -->
+        <div class="text-sm sm:text-lg text-slate-300 mb-6 text-center">
+            <p>&copy; 2025 Rafael V.M. Todos os direitos reservados.</p>
+            <p>Portfólio de Análise e Desenvolvimento de Sistemas.</p>
+        </div>
+    </footer>
 
+    <!-- JavaScript para o Menu Hamburger -->
+    <script>
+        // Seleciona o botão e o menu
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        // Função para fechar o menu (chamada ao clicar em um link)
+        function closeMenu() {
+            mobileMenu.classList.add('hidden');
+            // Altera o ícone de volta para o hamburger
+            menuToggle.innerHTML = '<i class="fas fa-bars text-2xl"></i>'; 
+        }
+
+        // Adiciona o listener de clique ao botão
+        menuToggle.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.contains('hidden');
+
+            if (isHidden) {
+                // Abre o menu
+                mobileMenu.classList.remove('hidden');
+                // Altera o ícone para o 'X' de fechar
+                menuToggle.innerHTML = '<i class="fas fa-times text-2xl"></i>'; 
+            } else {
+                // Fecha o menu
+                closeMenu();
+            }
+        });
+
+        // Torna a função closeMenu acessível globalmente (para os onclick nos links do menu mobile)
+        window.closeMenu = closeMenu;
+    </script>
 </body>
 </html>
